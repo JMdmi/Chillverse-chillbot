@@ -19,7 +19,7 @@ bot_desc = "Siempre chill"
 db_uri = os.environ["DB_URI"]
 
 table_name = "guilds"
-config_options = ["whitelist", "blacklist", "blacklist_role", "whitelist_role","lang"]
+config_options = ["whitelist", "blacklist", "blacklist_role", "whitelist_role","lang","tdl","tts_channel"]
 
 
 intents = discord.Intents.default()
