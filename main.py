@@ -380,7 +380,7 @@ async def on_message(message):
             await asyncio.sleep(3)
             await msg.delete()
     if message.content.lower().startswith('ñ'):
-        tts_channel = await get_conf(message.guild.id,"lang")
+        tts_channel = await get_conf(message.guild.id,"tts_channel")
         print(message.guild.id,"   ",tts_channel)
         if channel.id == tts_channel:
             if message.content.lower().startswith('ñ '):
