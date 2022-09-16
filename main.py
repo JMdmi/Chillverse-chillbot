@@ -12,8 +12,6 @@ from discord.ext.commands import has_permissions, MissingPermissions
 from gtts import gTTS
 
 invite_link = "https://discord.com/api/oauth2/authorize?client_id=1002579077879824384&permissions=8&scope=bot"
-
-bot_token='MTAwMjU3OTA3Nzg3OTgyNDM4NA.GRqfMr.O9HdCYp9BqCm4BdgMhcNGQXOml_vcTiXSGzqOI'
 bot_prefix = ";"
 bot_desc = "Siempre chill"
 
