@@ -43,7 +43,7 @@ async def get_dbvalue(guild, value):
     val = None
     for option in config_options:
         if value == option:
-            val = await db.fetchval(f'SELECT {value} FROM guilds WHERE id = {guild.id}')
+            val = await db.fetchval(f'SELECT {value} FROM guilds WHERE id = {guild}')
     await db.close()
     return val
 async def get_conf(guild, value):
