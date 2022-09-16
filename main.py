@@ -15,11 +15,8 @@ invite_link = "https://discord.com/api/oauth2/authorize?client_id=10025790778798
 bot_prefix = ";"
 bot_desc = "Siempre chill"
 
-db_host = "ec2-34-234-240-121.compute-1.amazonaws.com"
-db_name = "d9kp4ergs5n6ch"
-db_user = "ikenfxvufptinc"
-db_port = "5432"
-db_pass = "df699d6c73c0c3d2a5c469a94411ee2b2491fe6311cf6696fbf456857527f7c9"
+
+db_uri = os.environ["DB_URI"]
 
 table_name = "guilds"
 config_options = ["whitelist", "blacklist", "blacklist_role", "whitelist_role","lang"]
@@ -32,7 +29,7 @@ bot.remove_command("help")
 
 #FUNCIONES SOBRE BASE DE DATOS
 async def get_db_con():
-    db = await asyncpg.connect(user=db_user, password=db_pass, database=db_name, host=db_host,port=db_port)
+    db = await asyncpg.connect(db_uri)
     return db
 async def update_config(guild, column, value):
     db = await get_db_con()
