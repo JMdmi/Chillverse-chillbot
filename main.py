@@ -260,7 +260,7 @@ async def say(ctx):
     
 async def tts_speech(message,text="test",tts_lang=None,tld=None):
     if tts_lang == None:
-        tts_lang = await get_conf(message.guild,"lang")
+        tts_lang = await get_conf(message.guild.id,"lang")
     message_queue = deque([])
     if "@" in text:
         text = "Lo siento, no voy a decir eso"
